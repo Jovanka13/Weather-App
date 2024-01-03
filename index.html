@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,41 +9,42 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
     <link rel="stylesheet" href="style.css">
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
+
 <body>
-    <div class="container weather-app border p-3 rounded-3 mt-5 border-white shadow-sm p-3 mb-5 bg-body rounded">   
-       <form class="d-flex" id="search-form" autocomplete="off">
-            <input class="form-control me-2 border-white" type="search" placeholder="Enter a City" id="search-input">
-            <button class="btn btn-outline-primary searchCityBtn" type="submit">Search</button>
-        </form>
-        <h1 id="currentDate"></h1>
-        <strong><h2 id="cityName"></h2></strong>
-        <h3>
-            <span id="currentTemperature" class="currentTemp">11</span><span class="tempUnit">°C</span>
-        </h3>
-        <div class="iconElement">
-            <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="" width="100px" id="iconWeather" class="img-fluid">
+    <div class="container">
+        <div class="weather-app-wrapper border p-3 rounded-3 mt-5 border-white shadow-sm p-3 mb-5 bg-body rounded">
+            <form class="d-flex" id="search-form" autocomplete="off">
+                <input class="form-control me-2 border-white" type="search" placeholder="Enter a City" id="search-input">
+                <button class="btn btn-outline-primary searchCityBtn" type="submit">Search</button>
+            </form>
+            <h1 id="currentDate"></h1>
+            <strong>
+                <h2 id="cityName"></h2>
+            </strong>
+            <h3>
+                <span id="currentTemperature" class="currentTemp">11</span><span class="tempUnit">°C</span>
+            </h3>
+            <div class="iconElement">
+                <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="" id="iconWeather"
+                    class="img-fluid bg-primary rounded">
+            </div>
+            <div class="forecast" id="weatherForecast"></div>
+            <div class="row text-center weatherDescription">
+                <span class="col-6" id="cloudyOrNot"></span>
+                <span class="col-6"><span id="windSpeed"></span></span>
+            </div>
+            <div class="row text-center weatherDescription">
+                <span class="col-6"><span id="feelsLike"></span></span>
+                <span class="col-6"><span id="humidity"></span></span>
+            </div>
+            <footer>
+                <small><a href="" target="_blank"><i class="bi bi-github" style="font-size: 20px"></i></a>Coded by Jovanka
+                    Karoloska</small>
+            </footer>
         </div>
-        <div class="forecast">
-            <div id="weatherForecast"></div>
-        </div>
-        <div class="row text-center weatherDescription">
-            <span class="col-6" id="cloudyOrNot"></span>
-            <span class="col-6"><span id="windSpeed"></span></span>
-        </div>
-        <div class="row text-center weatherDescription">
-            <span class="col-6"><span id="feelsLike"></span></span>
-            <span class="col-6"><span id="humidity"></span></span>
-        </div>
-        <footer> 
-            <small><a href="" target="_blank"><i class="bi bi-github" style="font-size: 20px"></i></a>Coded by Jovanka Karoloska</small>
-        </footer>
     </div>
 
-    
-    
-    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
